@@ -1,0 +1,225 @@
+/*** GENERAL FONT STYLES ***/
+h1, h2, h3, p, td, th {
+  font-family: "Open Sans", sans-serif;
+}
+
+/*General Table Styles*/
+table {
+  border: 1px solid;
+  margin: 10px;
+  border-collapse: collapse;
+}
+
+td, th {
+  font-size: 0.8em;
+}
+
+tr {
+  line-height: 24px;
+}
+
+.dark_row {
+  background-color: #E7E6E6;
+}
+
+.green_row {
+  background-color: #2fb24c;
+}
+
+.black_row {
+  background-color: #1A1A1A;
+}
+
+/* Page Header */
+h1 {
+  font-weight: bold;
+  color: #2fb24c;
+}
+
+/* Section Headers*/
+h2 {
+  font-weight: bold;
+  background-color: #FF6200;
+  color: white;
+  grid-row: 1;
+  grid-column: 1 / 13;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
+
+/*Table headers*/
+h3 {
+  color: white;
+  margin: 0;
+  padding: 5px;
+}
+
+/*** GENERAL OR CLASS BASED STYLES ***/
+#master_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(0px, auto);
+  max-width: 700px;
+  margin: 10px;
+}
+
+.section_header {
+
+}
+
+/*** HEADER LAYOUT ***/
+#header_wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(0px, auto);
+  grid-row: 1;
+  grid-column: 1 / 3;
+}
+
+#top_logo {
+  width: 100%;
+  grid-row: 1;
+  grid-column: 1 / 7;
+}
+
+#spec_sheet_button {
+  width: 100%;
+  height: 50px;
+  grid-row: 2;
+  grid-column: 2 / 6;
+  background-color: #2fb24c;
+  border-radius: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+#model_name {
+  grid-row: 3;
+  grid-column: 1 / 7;
+  text-align: center;
+}
+
+/*** SPECIFICATIONS LAYOUT ***/
+#specs_wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(0px, auto);
+  grid-row: 2;
+  grid-column: 1 / 3;
+  border: 1px solid;
+}
+
+#rotor_specs_table {
+  grid-row: 2 / 4;
+  grid-column: 1 / 7;
+}
+
+#stator_specs_table {
+  grid-row: 2;
+  grid-column: 7 / 13;
+}
+
+#performance_table {
+  grid-row: 4 / 6;
+  grid-column: 1 / 6;
+}
+
+#elastomer_performance_table {
+  grid-row: 4;
+  grid-column: 6 / 13;
+}
+
+/*** MODEL SIZING INFORMATION LAYOUT ***/
+#sizing_wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(0px, auto);
+  grid-row: 3;
+  grid-column: 1 / 3;
+  border: 1px solid;
+  margin-top: 25px;
+}
+
+#sizing_table {
+  grid-row: 2;
+  grid-column: 2 / 12;
+}
+
+/*** INTERACTIVE POWER CURVES LAYOUT ***/
+#power_curve_wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(0px, auto);
+  grid-row: 4;
+  grid-column: 1 / 3;
+  border: 1px solid;
+  margin-top: 25px;
+}
+
+#power_curve_chart {
+  grid-row: 2;
+  grid-column: 2 / 12;
+  width: 100%;
+  height: 350px;
+  background-color: gray;
+  margin: 10px 0;
+}
+
+#curve_inputs {
+  grid-row: 3;
+  grid-column: 2 / 7;
+}
+
+.curve_input {
+  width: 50px;
+}
+
+#curve_outputs {
+  grid-row: 3 / 5;
+  grid-column: 7 / 12;
+}
+
+#lower_spec_shet_button {
+  width: 100%;
+  height: 50px;
+  grid-row: 5;
+  grid-column: 3 / 6;
+  background-color: #2fb24c;
+  border-radius: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  margin: 10px 0;
+}
+
+#power_curve_button {
+  width: 100%;
+  height: 50px;
+  grid-row: 5;
+  grid-column: 8 / 11;
+  background-color: #2fb24c;
+  border-radius: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  margin: 10px 0;
+}
+
+#derating_chart {
+  
+}
+
+/*** RECOMMENDED FIT USAGE ***/
+#fit_usage_wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(0px, auto);
+  grid-row: 5;
+  grid-column: 1 / 3;
+  border: 1px solid;
+  margin-top: 25px;
+}
+
+#downhole_fit_table {
+  grid-row: 2;
+  grid-column: 1 / 13;
+}
