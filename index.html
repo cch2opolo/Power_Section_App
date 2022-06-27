@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <script src="scripts\script.js" type="text/javascript"></script>
+  <script type="text/javascript" src="scripts\script.js"></script>
 </head>
 
 <body>
@@ -57,7 +57,7 @@
         </tr>
         <tr>
           <th>CREST-TO-VALLEY</th>
-          <td>2.634 in</td>
+          <td id="rotor_cv">2.634 in</td>
         </tr>
         <tr class="dark_row">
           <th>ECCENTRICITY</th>
@@ -88,7 +88,7 @@
         </tr>
         <tr class="dark_row">
           <th>TUBE ID</th>
-          <td>4.00 in</td>
+          <td id="tube_id">4.00 in</td>
         </tr>
         <tr>
           <th>CUTBACK</th>
@@ -131,7 +131,7 @@
         </tr>
         <tr class="dark_row">
           <th>FIT INCREASE/DEGF</th>
-          <td>0.000205</td>
+          <td id="expansion_rate">0.000205</td>
         </tr>
         <tr>
           <th>VECTOR TOLERANCE</th>
@@ -249,7 +249,9 @@
       </div>
       <table id="curve_inputs">
         <tr>
-          <th class="black_row" colspan="2"><h3>INPUTS</h3></th>
+          <th class="black_row" colspan="2">
+            <h3>INPUTS</h3>
+          </th>
         </tr>
         <tr>
           <th style="background-color:#2fb24c;">DIFFERENTIAL</th>
@@ -266,7 +268,9 @@
       </table>
       <table id="curve_outputs">
         <tr>
-          <th class="black_row" colspan="2"><h3>OUTPUTS</h3></th>
+          <th class="black_row" colspan="2">
+            <h3>OUTPUTS</h3>
+          </th>
         </tr>
         <tr>
           <th style="background-color:#2fb24c;">MOTOR RPM</th>
@@ -395,8 +399,78 @@
       </table>
     </div>
     <div class="wrapper" id="fit_calc_wrapper">
-
+      <h2 class='section_header'>DOWNHOLE FIT CALCULATOR</h2>
+      <table id="fit_calc_inputs">
+        <tr class="black_row">
+          <th colspan="2">
+            <h3>INPUTS</h3>
+          </th>
+        </tr>
+        <tr style="text-align:center;">
+          <th style="background-color:#2fb24c;">ELASTOMER</th>
+          <td><select class="dropdown" name="elastomer_in">
+              <option value="RD202">RD202</option>
+              <option value="Vantage">Vantage</option>
+            </select></td>
+        </tr>
+        <tr class="dark_row" style="text-align:center;">
+          <th style="background-color:#2fb24c;">FIT @ 70 DEGF</th>
+          <td><input id="shop_fit" type="number" name="fit_in" value="0.000" step="0.001" onchange="calcCompression()"></td>
+        </tr>
+      </table>
+      <table id="fit_calc_table">
+        <tr class="black_row">
+          <th colspan="12">
+            <h3>DOWNHOLE COMPRESSION</h3>
+          </th>
+        </tr>
+        <tr class="green_row">
+          <th></th>
+          <th>125</th>
+          <th>150</th>
+          <th>175</th>
+          <th>200</th>
+          <th>225</th>
+          <th>250</th>
+          <th>275</th>
+          <th>300</th>
+          <th>325</th>
+          <th>350</th>
+          <th>375</th>
+        </tr>
+        <tr id="dh_comp_row" style="text-align:center;">
+          <th style="background-color:#2fb24c;">DOWNHOLE COMP.</th>
+          <td>0.82</td>
+          <td>1.19</td>
+          <td>1.55</td>
+          <td>1.91</td>
+          <td>2.27</td>
+          <td>2.63</td>
+          <td>2.98</td>
+          <td>3.34</td>
+          <td>3.69</td>
+          <td>4.03</td>
+          <td>4.38</td>
+        </tr>
+        <tr id="dh_fit_row" class="dark_row" style="text-align:center;">
+          <th style="background-color:#2fb24c;">DOWNHOLE FIT</th>
+          <td>0.011</td>
+          <td>0.016</td>
+          <td>0.022</td>
+          <td>0.027</td>
+          <td>0.032</td>
+          <td>0.037</td>
+          <td>0.042</td>
+          <td>0.047</td>
+          <td>0.052</td>
+          <td>0.057</td>
+          <td>0.063</td>
+        </tr>
+      </table>
     </div>
+  </div> <!-- MASTER WRAPPER -->
+  <div class="test_output">
+    <p id="test_output">test text</p>
   </div>
 </body>
 

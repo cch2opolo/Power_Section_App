@@ -6,20 +6,27 @@
     <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
   </head>
   <body>
-    <div id="tester" style="width:600px;height:400px;"></div>
-    <script type="text/javascript">
-      var alpha
-      var beta
-      var gamma
-      var diff = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900]
-      var ydata = []
-      for (var i = 0; i < xdata.length; i++) {
-        ydata[i] = xdata[i] + 1
+    <div id="myDiv" style="width:600px;height:400px;"></div>
+    <script>
+      var diff = [100, 200, 300, 400]
+      for (var i = 0; i < diff.length; i++) {
+        diff[i]
       }
-      Plotly.newPlot( "tester", [{
-      x: xdata,
-      y: ydata }], {
-      margin: { t: 0 } } );
+      var trace1 = {
+        x: diff,
+        y: [10, 15, 13, 17],
+        type: 'scatter'
+      };
+
+      var trace2 = {
+        x: diff,
+        y: [16, 5, 11, 9],
+        type: 'scatter'
+      };
+
+      var data = [trace1, trace2];
+
+      Plotly.newPlot('myDiv', data);
     </script>
   </body>
 </html>
